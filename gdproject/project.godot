@@ -8,11 +8,22 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "Camera2D",
+"class": "PanningCamera2D",
+"language": "GDScript",
+"path": "res://scripts/PanningCamera2D.gd"
+} ]
+_global_script_class_icons={
+"PanningCamera2D": ""
+}
+
 [application]
 
 config/name="Mall Map"
 run/main_scene="res://scenes/main.tscn"
-config/icon="res://icon.png"
+boot_splash/image="res://assets/icon.png"
+config/icon="res://assets/icon.png"
 
 [display]
 
