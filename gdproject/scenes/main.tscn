@@ -68,6 +68,26 @@ margin_right = 192.0
 margin_bottom = 79.0
 select_mode = 2
 
+[node name="Color" type="HBoxContainer" parent="CanvasLayer/Sidebar/Editor"]
+margin_top = 83.0
+margin_right = 192.0
+margin_bottom = 108.0
+rect_min_size = Vector2( 0, 25 )
+
+[node name="Label" type="Label" parent="CanvasLayer/Sidebar/Editor/Color"]
+margin_top = 3.0
+margin_right = 44.0
+margin_bottom = 22.0
+text = "Цвет: "
+
+[node name="ColorPickerButton" type="ColorPickerButton" parent="CanvasLayer/Sidebar/Editor/Color"]
+margin_left = 48.0
+margin_right = 192.0
+margin_bottom = 25.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color( 0.882353, 0.811765, 0.811765, 1 )
+
 [node name="Search" type="VBoxContainer" parent="CanvasLayer/Sidebar"]
 visible = false
 anchor_right = 1.0
@@ -78,3 +98,4 @@ margin_right = -4.0
 margin_bottom = -4.0
 
 [connection signal="item_selected" from="CanvasLayer/Sidebar/Editor/RectTypes" to="." method="_on_RectTypes_item_selected"]
+[connection signal="color_changed" from="CanvasLayer/Sidebar/Editor/Color/ColorPickerButton" to="." method="_on_ColorPickerButton_color_changed"]
