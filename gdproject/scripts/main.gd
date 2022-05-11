@@ -39,7 +39,7 @@ func _on_RectTypes_item_selected(index: int) -> void:
 		0:
 			rect_scene = preload("res://scenes/rect_bg.tscn")
 		1:
-			rect_scene = preload("res://scenes/rect_bg.tscn")
+			rect_scene = preload("res://scenes/rect_rm.tscn")
 
 
 func _on_ColorPickerButton_color_changed(color: Color) -> void:
