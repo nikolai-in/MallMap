@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/theme/kenneyUI.tres" type="Theme" id=1]
+[ext_resource path="res://src/Rects/room_label.gd" type="Script" id=2]
+
+[node name="Rect" type="Polygon2D"]
+
+[node name="Label" type="Label" parent="."]
+margin_right = 40.0
+margin_bottom = 19.0
+theme = ExtResource( 1 )
+text = "test"
+align = 1
+script = ExtResource( 2 )

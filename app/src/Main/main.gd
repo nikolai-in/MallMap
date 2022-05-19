@@ -6,7 +6,7 @@ onready var map_plane: Node2D = $Map
 
 var start_pos : Vector2 = Vector2.ZERO
 var end_pos : Vector2 = Vector2.ZERO
-var rect_scene : PackedScene = preload("res://scenes/rect_bg.tscn")
+var rect_scene : PackedScene = preload("res://src/Rects/rect_bg.tscn")
 onready var rect_color : Color = $CanvasLayer/Sidebar/Editor/Color/ColorPickerButton.color
 
 
@@ -37,9 +37,9 @@ func make_rect(start: Vector2, end: Vector2) -> Polygon2D:
 func _on_RectTypes_item_selected(index: int) -> void:
 	match index:
 		0:
-			rect_scene = preload("res://scenes/rect_bg.tscn")
+			rect_scene = preload("res://src/Rects/rect_bg.tscn")
 		1:
-			rect_scene = preload("res://scenes/rect_rm.tscn")
+			rect_scene = preload("res://src/Rects/rect_rm.tscn")
 
 
 func _on_ColorPickerButton_color_changed(color: Color) -> void:

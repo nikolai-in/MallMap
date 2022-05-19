@@ -12,19 +12,31 @@ _global_script_classes=[ {
 "base": "Camera2D",
 "class": "PanningCamera2D",
 "language": "GDScript",
-"path": "res://scripts/PanningCamera2D.gd"
+"path": "res://src/Camera/PanningCamera2D.gd"
+}, {
+"base": "Node",
+"class": "State",
+"language": "GDScript",
+"path": "res://src/Main/StateMachine/State.gd"
+}, {
+"base": "Node",
+"class": "StateMachine",
+"language": "GDScript",
+"path": "res://src/Main/StateMachine/StateMachine.gd"
 } ]
 _global_script_class_icons={
-"PanningCamera2D": ""
+"PanningCamera2D": "",
+"State": "res://assets/icons/state.svg",
+"StateMachine": "res://assets/icons/state_machine.svg"
 }
 
 [application]
 
 config/name="Mall Map"
-run/main_scene="res://scenes/main.tscn"
-boot_splash/image="res://assets/icon.png"
+run/main_scene="res://src/Main/main.tscn"
+boot_splash/image="res://icon.png"
 boot_splash/bg_color=Color( 0.396078, 0.611765, 1, 1 )
-config/icon="res://assets/icon.png"
+config/icon="res://icon.png"
 
 [display]
 
@@ -43,7 +55,8 @@ color=false
 
 [gui]
 
-theme/custom_font="res://assets/fonts/text.tres"
+theme/use_hidpi=true
+theme/custom="res://assets/theme/kenneyUI.tres"
 
 [physics]
 

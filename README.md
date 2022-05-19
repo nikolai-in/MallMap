@@ -1,3 +1,3 @@
 # Mall Map Editor
 
-![Mall Map icon](gdproject/assets//icon.png)
+![Mall Map icon](app/icon.png)
