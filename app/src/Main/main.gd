@@ -9,6 +9,8 @@ var end_pos : Vector2 = Vector2.ZERO
 var rect_scene : PackedScene = preload("res://src/Rects/rect_bg.tscn")
 onready var rect_color : Color = $CanvasLayer/Sidebar/Editor/Color/ColorPickerButton.color
 
+onready var layer_list: = $CanvasLayer/Sidebar/Editor/Tree
+
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventMouseButton:
@@ -18,7 +20,8 @@ func _unhandled_input(event: InputEvent) -> void:
 		if !event.is_pressed() and $CanvasLayer/Sidebar/Editor.visible:
 			if event.button_index == BUTTON_LEFT:
 				end_pos = get_global_mouse_position()
-				map_plane.add_child(make_rect(start_pos, end_pos)) 
+				map_plane.add_child(make_rect(start_pos, end_pos))
+				layer_list.update_tree($Map)
 
 
 func make_line(start: Vector2, end: Vector2) -> Line2D:

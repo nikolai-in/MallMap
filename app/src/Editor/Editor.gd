@@ -1,4 +1,4 @@
-extends CanvasLayer
+extends State
 
 
 # Declare member variables here. Examples:
@@ -14,10 +14,3 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta: float) -> void:
 #	pass
-
-
-func _on_Button_toggled(button_pressed: bool) -> void:
-	if button_pressed: 
-		$Popup.popup()
-	else:
-		$Popup.hide()
